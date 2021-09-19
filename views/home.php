@@ -1,1 +1,1 @@
-<section id="home-container" class="container"></section>
+<main id="home-container" class="container"></main>

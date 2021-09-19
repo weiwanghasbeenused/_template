@@ -1,11 +1,11 @@
-*{padding:0;margin:0;box-sizing:border-box;font-weight:normal;}
-html{font-size:24px;font-family: arial, sans-serif;font-weight:400;}
+*{padding:0;margin:0;font-weight:normal;}
+html{font-size:14px;font-family: arial, sans-serif;font-weight:400;-webkit-text-size-adjust: 100%;}
 body{
 }
 h1, h2, h3
 {
-	font-size: 1rem;
-	line-height: 1.25em;
+	/*font-size: 1rem;*/
+	/*line-height: 1.25em;*/
 }
 
 a
@@ -19,15 +19,41 @@ a
 {
 	color: #00f;
 }
-img{
-	width: 100%;
+b,
+strong {
+	font-weight: bolder;
 }
-video{
+img, video{
 	width: 100%;
+	display: block;
+}
+img {
+	border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+button,
+input {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
 }
 header
 {
 	
+}
+main {
+	display: block;
 }
 .container
 {
@@ -48,7 +74,10 @@ header
 	background-color: #000;
 }
 
-@media screen and (min-width: 830px){
+/* ========
+	 ipad
+   ======== */
+@media screen and (min-width: 737px){
 	header
 	{
 		
@@ -62,7 +91,15 @@ header
 		display: none;
 	}
 }
+/* ==========
+	 laptop
+   ========== */
+@media screen and (min-width: 1025px){
 
+}
+/* ================
+	 large screen
+   ================ */
 @media screen and (min-width: 1500px){
 	.container
 	{

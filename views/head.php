@@ -13,7 +13,10 @@
     
 </head>
 <body class = ''>
+<script>
+    var body = document.body;
+    var wW = window.innerWidth;
+    var wH = window.innerHeight;
+</script>
 <script type = "text/javascript" src = "/static/js/_sniffing.js"></script>
 <script type = "text/javascript" src = "/static/js/_functions.js"></script>
-<script type = "text/javascript" src = "/static/js/_general.js"></script>
-
