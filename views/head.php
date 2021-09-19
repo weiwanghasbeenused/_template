@@ -1,4 +1,34 @@
-<!DOCTYPE html>
+<?
+// open-records-generator
+require_once('open-records-generator/config/config.php');
+require_once('open-records-generator/config/url.php');
+
+$db = db_connect("guest");
+$oo = new Objects();
+$mm = new Media();
+$ww = new Wires();
+$uu = new URL();
+
+if($uu->id)
+    $item = $oo->get($uu->id);
+else if(!empty($_GET)) {
+    try {
+        $uri_temp = $uri;
+        array_shift($uri_temp);
+        $temp = $oo->urls_to_ids($uri_temp);
+        $id = end($temp);
+        $item = $oo->get($id);
+    } catch(Exception $err) {
+        $item = $oo->get(0);
+    }
+}
+$site_name = '';
+
+$body_class = '';
+if(!$uri[1])
+    $body_class .= ' home';
+
+?><!DOCTYPE html>
 <html>
 <head>
 	<title><? echo $site_name ;?></title>
